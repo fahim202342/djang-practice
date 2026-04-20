@@ -1,0 +1,28 @@
+{% extends 'master/base.html' %}
+
+{% block block_title %}
+    departments
+{% endblock block_title %}
+
+{% block body %}
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Title</th>
+      <th scope="col">Code</th>
+      <th scope="col">Credit</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for course in course %}
+    <tr>
+      <td>{{course.title}}</td>
+      <td>{{course.code}}</td>
+      <td>{{course.credit}}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+{% endblock body %}

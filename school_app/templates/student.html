@@ -1,0 +1,28 @@
+{% extends 'master/base.html' %}
+
+{% block block_title %}
+    students
+{% endblock block_title %}
+
+{% block body %}
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Email</th>
+      <th scope="col">Address</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for students in students %}
+    <tr>
+      <td>{{students.name}}</td>
+      <td>{{students.email}}</td>
+      <td>{{students.address}}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+{% endblock body %}
